@@ -21,22 +21,26 @@ The Django Todo List app is built using the following technologies:
 - HTML: The standard markup language for creating web pages. HTML is used for structuring the content and layout of the Todo List app's frontend.
 
 - Bootstrap: A popular front-end framework that provides a set of pre-designed components and responsive CSS classes. Bootstrap simplifies the process of creating visually appealing and mobile-friendly web pages.
+
 ## Installation
 
 To install and set up the Django Todo List app, follow these steps:
 
 1. Clone the repository:
+
 ```bash
     $ git clone https://github.com/your-username/django-todo-list.git
 ```
 Replace 'your-username' with your actual GitHub username.
 
 2. Navigate to the project directory:
+
 ```bash
     $ cd django-todo-list
 ```
 
 3. Set up a virtual environment (optional, but recommended):
+
 ```bash
     $ python -m venv myenv
     $ source myenv/bin/activate  # For Linux/macOS
@@ -45,23 +49,27 @@ Replace 'your-username' with your actual GitHub username.
 Activating the virtual environment isolates the project dependencies from your system's global Python environment.
 
 4. Install the project dependencies:
+
 ```bash
     $ pip install -r requirements.txt
 ```
 This command will install all the necessary Python packages and libraries required for the Django Todo List app to function correctly.
 
 5. Make the migrations to the database:
+
 ```bash
     $ python manage.py makemigrations
 ```
 
 6. Apply the database migrations:
+
 ```bash
     $ python manage.py migrate
 ```
 This command will create the necessary database tables and set up the initial database schema.
 
 7. Start the development server:
+
 ```bash
     $ python manage.py runserver
 ```
@@ -69,6 +77,7 @@ This command will create the necessary database tables and set up the initial da
 The development server will start running, and you can access the Todo List app in your web browser at `http://localhost:8000`.
 
 Note: If port 8000 is already in use, you can specify a different port by appending the desired port number to the runserver command (e.g., python manage.py runserver 8080).
+
 ## Usage
 
 Once the development server is running and you have accessed the Todo List app in your web browser at `http://localhost:8000`, you can follow these steps to interact with the app:
@@ -86,34 +95,39 @@ Once the development server is running and you have accessed the Todo List app i
 6. Log out: When you are done using the app, make sure to log out to secure your account. Click on log out.
 
 The Django Todo List app provides a user-friendly interface to manage your tasks efficiently.
+
 ## API Reference
+
 The Django Todo List app provides a RESTful API using the Django REST Framework. You can interact with the following API endpoints:
 
 #### Get all items
 
 ```http
-  GET api/todo/ [name='todo_list']
+    GET api/todo/ [name='todo_list']
 ```
 Retrieves a list of all tasks.
 
 #### Create Item
 
 ```http
-  POST api/todo/create/ [name='create_todo']
+    POST api/todo/create/ [name='create_todo']
 ```
 Creates a new task. Send a POST request with the task details in the request body.
 
 #### Update Item
+
 ```http
     PUT api/todo/update/<int:pk>/ [name='update_todo']
 ```
 Updates a specific task by its ID. Send a PUT request with the updated task details in the request body.
 
 #### Delete Item
+
 ```http
     DELETE api/todo/delete/<int:pk>/ [name='delete_todo']
 ```
 Deletes a specific task by its ID.
+
 ## Django Dashboard
 
 The Django Todo List app includes a built-in Django admin dashboard that provides an interface for managing the application's data and configurations. You can access the Django admin dashboard using the following steps:
