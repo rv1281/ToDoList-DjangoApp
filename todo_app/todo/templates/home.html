@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="jumbotron bg-warning">
+        <div class="container text-center">
+            <h1 class="display-2"><strong>Welcome to ToDoList!</strong></h1>
+            <p class="lead">Please {% if user.is_authenticated %}<strong>click on dashboard</strong>{% else %}<strong>login or signup</strong>{% endif %} to start using the site.</p>
+        </div>
+    </div>
+{% endblock %}
