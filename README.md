@@ -66,7 +66,7 @@ This command will create the necessary database tables and set up the initial da
     $ python manage.py runserver
 ```
 
-The development server will start running, and you can access the Todo List app in your web browser at http://localhost:8000.
+The development server will start running, and you can access the Todo List app in your web browser at `http://localhost:8000`.
 
 Note: If port 8000 is already in use, you can specify a different port by appending the desired port number to the runserver command (e.g., python manage.py runserver 8080).
 ## Usage
@@ -129,6 +129,7 @@ The Django Todo List app includes a built-in Django admin dashboard that provide
 
 - Username: admin
 - Password: admin
+
 These are the default credentials provided as an example. You should change the superuser credentials to enhance the security of your application.
 
 4. Once logged in, you will have access to the Django admin dashboard. From here, you can perform various administrative tasks such as managing users, handling database models, and configuring site settings.
